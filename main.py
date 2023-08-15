@@ -33,8 +33,8 @@ def black_scholes_call(sigma, S, K, T, r):
 ticker_symbol = str(input('Qual o código do ticker? ')) + '.SA'
 start_date = str(input('Qual a data de inicio para calcular a volatilidade da ação (Escreva no formato AAAA-MM-DD?)'))
 end_date = str(input('Qual a data de término para calcular a volatilidade da ação (Escreva no formato AAAA-MM-DD?)'))
-K = 23.72  # Preço de exercício da opção
-T = 3  # Tempo até a expiração da opção em anos
-r = 0.1325  # Taxa de juros livre de risco (Selic)
+K = float(input('Qual o preço de exercicio da opção? (Separe o valor por . e não ,)'))
+T = float(input('Tempo até a expiração da opção em anos? (Separe o valor por . e não ,)'))
+r = float(input('Qual a taxa de juros livre de risco (Selic)? (Separe o valor por . e não ,)'))
 fair_value = black_scholes_call(volatility(), current_price(), K, T, r)
 print(f"Fair value da opção de compra: R$ {fair_value:.4f}")
